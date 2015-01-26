@@ -104,12 +104,9 @@ STATICFILES_DIRS = (
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 AUTHENTICATION_BACKENDS += (
-    'social.backends.open_id.OpenIdAuth',
-    'social.backends.google.GoogleOpenId',
     'social.backends.google.GoogleOAuth2',
-    'social.backends.google.GoogleOAuth',
-    'social.backends.twitter.TwitterOAuth',
-    'social.backends.yahoo.YahooOpenId',
+    'social.backends.google.GooglePlusAuth',
+    'social.backends.facebook.FacebookOAuth2',
 )
 
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
@@ -117,4 +114,8 @@ SOCIAL_AUTH_URL_NAMESPACE = 'social'
 TEMPLATE_CONTEXT_PROCESSORS += (
     'social.apps.django_app.context_processors.backends',
     'social.apps.django_app.context_processors.login_redirect',
+)
+
+MIDDLEWARE_CLASSES += (
+    'social.apps.django_app.middleware.SocialAuthExceptionMiddleware',
 )
