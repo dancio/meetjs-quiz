@@ -5,9 +5,10 @@ from django.core.urlresolvers import reverse
 
 from .forms import AnswerForm
 
+
 @login_required()
 def question(request):
-    form = AnswerForm(request.user, request.POST or None)
+    form = AnswerForm(request.POST or None)
 
     if request.method == 'POST' and form.is_valid():
         answer = form.save(commit=False)
