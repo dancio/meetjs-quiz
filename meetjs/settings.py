@@ -112,7 +112,7 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 AUTHENTICATION_BACKENDS += (
     'social.backends.google.GoogleOAuth2',
-    'social.backends.google.GooglePlusAuth',
+    # 'social.backends.google.GooglePlusAuth',
     'social.backends.facebook.FacebookOAuth2',
 )
 
