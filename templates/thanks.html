@@ -2,4 +2,11 @@
 
 {% block content %}
 Thanks
+
+{% for backend in backends.associated %}
+<a
+  href="{% url "social:disconnect" backend %}"
+  class="btn btn-default btn-lg btn-block">{{ backend }}</a>
+{% endfor %}
+
 {% endblock %}
