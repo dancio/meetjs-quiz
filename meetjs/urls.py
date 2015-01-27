@@ -8,4 +8,7 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url('', include('social.apps.django_app.urls', namespace='social')),
+    url(r'^$', 'quiz.views.question', name='question'),
+    url(r'^login/$', 'meetjs.views.login', name='login'),
+    url(r'^thanks/$', 'quiz.views.thanks', name='thanks'),
 )

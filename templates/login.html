@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+Login
+
+{% for backend in backends.backends %}
+<p>
+  <a
+    href="{% url "social:begin" backend %}"
+    class="btn btn-default btn-lg btn-block">{{ backend }}</a>
+</p>
+{% endfor %}
+
+{% endblock %}
