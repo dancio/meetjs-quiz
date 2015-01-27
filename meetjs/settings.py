@@ -18,6 +18,10 @@ TEMPLATE_DIRS += (
     os.path.join(BASE_DIR, 'templates'),
 )
 
+STATICFILES_DIRS += (
+    os.path.join(BASE_DIR, 'static'),
+)
+
 LOGIN_URL = '/login/'
 
 
@@ -46,6 +50,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'social.apps.django_app.default',
+    'bootstrap3',
+
     'quiz',
 )
 
@@ -103,10 +109,6 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
-
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
