@@ -3,6 +3,7 @@
 {% block content %}
 Thanks
 
+{{ backends.associated }}
 {% for backend in backends.associated %}
 <a
   href="{% url "social:disconnect" backend %}"
