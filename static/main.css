@@ -1,0 +1,74 @@
+/*------------------------------------*\
+  Global
+\*------------------------------------*/
+
+.bg {
+  background: url('/static/img/header_bg.jpg') no-repeat 100% 0;
+  background-size: cover;
+  height: 100vh;
+}
+
+.logo {
+  margin: 20% auto 0;
+  width: 200px;
+  height: 85px;
+  background: url('/static/img/logo.png') no-repeat 50% 50%;
+  background-size: cover;
+  text-indent: -999em;
+}
+
+/*------------------------------------*\
+  Btn
+\*------------------------------------*/
+
+.btn {
+  text-transform: capitalize;
+  font-size: 2em;
+}
+
+/*------------------------------------*\
+  Login
+\*------------------------------------*/
+
+.login-btns {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  right: 40px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.login-btns p {
+  margin: 40px 0;
+}
+
+/*------------------------------------*\
+  Form
+\*------------------------------------*/
+
+.container-form {
+  margin: 40px 0;
+}
+
+h3 {
+  margin-bottom: 40px;
+}
+
+.form-group {
+  margin-bottom: 60px;
+}
+
+/*------------------------------------*\
+  Thanks
+\*------------------------------------*/
+
+.thanks {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  right: 40px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 1.4em;
+}

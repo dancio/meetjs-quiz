@@ -1,12 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-Thanks
+<div class="container">
+  <div class="thanks">
+    <h2 class="text-center">Thanks!</h2>
 
-{% for auth in backends.associated %}
-<a
-  href="{% url "social:disconnect" auth.provider %}"
-  class="btn btn-default btn-lg btn-block">{{ auth.provider }}</a>
-{% endfor %}
+    <p class="text-center">Your answer has been saved!</p>
+    <h3 class="text-center">Remember to check out<br><a href="http://acodemy.io/">Acodemy.io workshops</a>!</h3>
 
+    <div class="login-btns">
+      {% for auth in backends.associated %}
+      <a
+        href="{% url "social:disconnect" auth.provider %}"
+        class="btn btn-default btn-lg btn-block">{{ auth.provider }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
 {% endblock %}
