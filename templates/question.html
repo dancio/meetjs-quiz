@@ -2,17 +2,19 @@
 {% load bootstrap3 %}
 
 {% block content %}
-<div class="container container-form">
-  <h3>How is called a function, similar to <strong>Ramda.foldl()</strong>, available as an Array method?</h3>
-  <p>
-    <form action="{% url "question" %}" method="post" class="form">
-      {% csrf_token %}
-      {% bootstrap_form form %}
-      {% buttons %}
-        <button type="submit" class="btn btn-success">Submit</button>
-      {% endbuttons %}
-    </form>
-  </p>
+<div class="container">
+  <div class="container-form">
+    <h3>How is called a function, similar to <strong>Ramda.foldl()</strong>, available as an Array method?</h3>
+    <p>
+      <form action="{% url "question" %}" method="post" class="form">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% buttons %}
+          <button type="submit" class="btn btn-success">Submit</button>
+        {% endbuttons %}
+      </form>
+    </p>
+  </div>
 </div>
 
 {% endblock %}
