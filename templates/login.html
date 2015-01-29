@@ -1,19 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="bg">
-  <div class="container">
-    <h1 class="logo">10Clouds</h1>
+<div class="container bg">
+  <h1 class="logo">10Clouds</h1>
 
-    <div class="login-btns">
-      {% for backend in backends.backends %}
-        <p>
-          <a
-            href="{% url "social:begin" backend %}"
-            class="btn btn-default btn-lg btn-block">{{ backend }}</a>
-        </p>
-      {% endfor %}
-    </div>
+  <div class="login-btns">
+    {% for backend in backends.backends %}
+      <p>
+        <a
+          href="{% url "social:begin" backend %}"
+          class="btn btn-default btn-lg btn-block">{{ backend }}</a>
+      </p>
+    {% endfor %}
   </div>
 </div>
 {% endblock %}
